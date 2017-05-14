@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman Game</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var mystery = "rambo";
+		var answer = [];
+    var usedLetters = [];
+
+    document.onkeyup = function(event) {
+      var inputKey = String.fromCharCode(event.keyCode).toLowerCase();
+      for (var i = 0; i < mystery.length; i++) {
+      	if (inputKey === mystery.charAt(i)) { // checks to see if string letters match
+      		answer.splice(i, 1, inputKey); // adds correct keyed letter to answer array at index
+      		console.log(answer); //FOR TESTING: shows array being built
+        }
+     	}
+    }
+
+	</script>
+
+</body>
+</html>
+
+Pseudo Code
+
+<!-- if inputKey is in usedLetters {
+      Print "Already used"  
+    }
+
+
+    else {
+    usedLetters.push(inputKey)
+    }
+
+
+
+  -->
