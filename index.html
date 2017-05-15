@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hangman Game</title>
+  <title>Test string read</title>
 </head>
 <body>
-	<script type="text/javascript">
-		var mystery = "rambo";
-		var answer = [];
+  <script type="text/javascript">
+    var mystery = "rambo";
+    var answer = [];
     var usedLetters = [];
+    var lives = 12;
 
     document.onkeyup = function(event) {
       var inputKey = String.fromCharCode(event.keyCode).toLowerCase();
       for (var i = 0; i < mystery.length; i++) {
-      	if (inputKey === mystery.charAt(i)) { // checks to see if string letters match
-      		answer.splice(i, 1, inputKey); // adds correct keyed letter to answer array at index
-      		console.log(answer); //FOR TESTING: shows array being built
+        if (inputKey === mystery.charAt(i)) { // checks to see if string letters match
+          answer.splice(i, 1, inputKey); // adds correct keyed letter to answer array at index
+          console.log(answer); //FOR TESTING: shows array being built
+        } else {
+          lives--;
+          usedLetters.push(inputKey); //used letters needs to be limited somehow
         }
-     	}
+        console.log(usedLetters);
+      }
     }
 
-	</script>
+  </script>
 
 </body>
 </html>
 
-Pseudo Code
+<!-- Pseudo Code -->
 
-<!-- if inputKey is in usedLetters {
-      Print "Already used"  
+<!-- 
+    //How to add letters to used list 
+    //nest outside of input evaluation?
+    if inputKey is in usedLetters {
+      Alert "Already used"  
     }
 
 
@@ -35,6 +43,13 @@ Pseudo Code
     usedLetters.push(inputKey)
     }
 
+    else if
+    
 
+    // Win-Lose Conditions
+    - Win =  mystery.length = answer.length
+
+
+    //Pick mystery word from array of words
 
   -->
