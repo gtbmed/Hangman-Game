@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test QA</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var mystery = "rambom";
+		var answer = [];
+    var usedLetters = [];
+    var lives = 12;
+
+    document.onkeyup = function(event) {
+      var inputKey = String.fromCharCode(event.keyCode).toLowerCase();
+        if (usedLetters.includes(inputKey) === true) {
+            alert("You used this letter already");
+        } else {
+            usedLetters.splice(0, 0, inputKey);
+            console.log("used letters " + usedLetters);
+
+          if (mystery.includes(inputKey) === true) { //Check to see if letter is in mystery
+            for (var i = 0; i < mystery.length; i++) {
+            	if (inputKey === mystery.charAt(i)) { // Finds location of matching letter
+            		answer.splice(i, 0, inputKey); // adds correct keyed letter to answer array at index
+            		console.log(answer); //FOR TESTING: shows array being built
+              }
+            }
+          } else { // if the letter is not in the mystery word
+            lives--; //take a life away
+            console.log(lives); //FOR TESTING: shows lives count
+          }
+        }
+    }
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- Pseudo Code -->
+
+<!-- 
+    //How to add letters to used list 
+    //nest outside of input evaluation?
+    // Will need "For" loop to search for inputKey?
+    if inputKey is in usedLetters {
+      Alert "Already used"  
+    }
+
+
+    else {
+    usedLetters.push(inputKey)
+    }
+
+    else if
+    
+
+    // Win-Lose Conditions
+    - Win =  mystery.length = answer.length
+
+
+    //Pick mystery word from array of words
+
+  -->

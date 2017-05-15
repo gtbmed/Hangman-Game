@@ -13,6 +13,14 @@
 
     document.onkeyup = function(event) {
       var inputKey = String.fromCharCode(event.keyCode).toLowerCase();
+        if (usedLetters.includes(inputKey) === true) {
+            alert("You used this letter already");
+        } else {
+            usedLetters.splice(0, 0, inputKey);
+            console.log("used letters " + usedLetters);
+        }
+    } 
+      // FAILED or PARTIAL SUCESS
       /*for (var x = 0; x < usedLetters.length; x++) {
         if (inputKey === usedLetters[x]) {
             Alert("You used this letter already");
@@ -37,13 +45,7 @@
           }*/
       //}
 
-          if (usedLetters.includes(inputKey) === true) {
-            alert("You used this letter already");
-          } else {
-            usedLetters.splice(0, 0, inputKey);
-            console.log("used letters " + usedLetters);
-          }
-    }
+
 	</script>
 
 </body>
