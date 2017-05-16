@@ -60,7 +60,7 @@ function checkWin(){
 // ===========================================================================
 newGame();
 addSpaces();
-//document.getElementById('mystery').innerHTML= 'TESTING';
+document.getElementById('mystery').innerHTML= mystery;
 document.getElementById('lives').innerHTML = "Guesses Remaining: " + mystery;
 document.onkeyup = function(event) {
     var inputKey = String.fromCharCode(event.keyCode).toLowerCase();
