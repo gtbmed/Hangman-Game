@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test string read</title>
+  <title>Terrible Movies Hangman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h1>Terrible Movie Hangman</h1>
+        <div class="row">
+          <h2>Now Worse Than Before!</h2>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h1>Hangman</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <p>Press any key to start</p>
+        <p id="wins">Wins: </p>
+        <p id="lives">Guesses Remaining: </p>
+      </div>
 
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <p>Terrible Movie</p>
+        <p id="mystery"> </p>
+        <br>
+        <p>Letters Used already</p>
+        <p id="used"> </p>
+
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
