@@ -5,10 +5,15 @@
 </head>
 <body>
   <script type="text/javascript">
+  // VARIABLES
+  // ==========================================================================
     var mystery = "rambo";
     var answer = [];
     var usedLetters = [];
     var lives = 12;
+
+  // FUNCTIONS
+  // ==============================================================================
 
     document.onkeyup = function(event) {
       var inputKey = String.fromCharCode(event.keyCode).toLowerCase();
@@ -17,8 +22,6 @@
           answer.splice(i, 1, inputKey); // adds correct keyed letter to answer array at index
           console.log(answer); //FOR TESTING: shows array being built
         } else {
-          lives--;
-          usedLetters.push(inputKey); //used letters needs to be limited somehow
         }
         console.log(usedLetters);
       }

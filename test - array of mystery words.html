@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test QA</title>
+	<title>Terrible Movies</title>
 </head>
 <body>
 	<script type="text/javascript">
     // VARIABLES
     // ==========================================================================
-        var mystery;
+		var mystery;
         var wordBank = ["mac and me", "howared the duck", "battlefield earth", "freddy got fingered", "from justin to kelly", "gigli", "catwoman", "entourage", "mortdecai", "suicide squad", "glitter", "the master of disguise", "jack and jill" ]
-        var answer = [];
+		var answer = [];
         var usedLetters = [];
         var lives = 12;
         var wins = 0;
@@ -77,10 +77,10 @@
 
           if (mystery.includes(inputKey) === true) { //Check to see if letter is in mystery
             for (var i = 0; i < mystery.length; i++) {
-                if (inputKey === mystery.charAt(i)) { // Finds location of matching letter
+            	if (inputKey === mystery.charAt(i)) { // Finds location of matching letter
                     answer[i] = mystery.charAt(i);
-                    //answer.splice(i, 0, inputKey); // adds correct keyed letter to answer array at index
-                    console.log("Answer: " + answer); //FOR TESTING: shows array being built
+            		//answer.splice(i, 0, inputKey); // adds correct keyed letter to answer array at index
+            		console.log("Answer: " + answer); //FOR TESTING: shows array being built
               }
             }
           } else { // if the letter is not in the mystery word
@@ -94,7 +94,7 @@
 
 
 
-    </script>
+	</script>
 
 </body>
 </html>
