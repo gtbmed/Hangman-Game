@@ -30,7 +30,7 @@
     function addSpaces() {
         if (mystery.includes(" ") === true) {  //Looks for " " in string.
             for (var x= 0; x < mystery.length; x++) {
-                if (" " === mystery.charAt(x)) { // Finds location of matching letter
+                if (" " === mystery.charAt(x)) { // Finds location of " "
                     answer[x] = mystery.charAt(x);
                     console.log("test " + answer); //FOR TESTING: Should show space added to array
                 } else {
