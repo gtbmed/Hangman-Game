@@ -60,8 +60,8 @@ function checkWin(){
 // ===========================================================================
 newGame();
 addSpaces();
-document.getElementById('mystery').innerHTML= mystery;
-document.getElementById('lives').innerHTML = "Guesses Remaining: " + mystery;
+document.getElementById('answer').innerHTML= answer;
+document.getElementById('lives').innerHTML = "Guesses Remaining: " + lives;
 document.onkeyup = function(event) {
     var inputKey = String.fromCharCode(event.keyCode).toLowerCase();
     if (usedLetters.includes(inputKey) === true) {
@@ -75,11 +75,13 @@ document.onkeyup = function(event) {
         for (var i = 0; i < mystery.length; i++) {
             if (inputKey === mystery.charAt(i)) { // Finds location of matching letter
                 answer[i] = mystery.charAt(i);
+                document.getElementById('answer').innerHTML= answer;
                 console.log("Answer: " + answer); //FOR TESTING: shows array being built
           }
         }
       } else { // if the letter is not in the mystery word
         lives--; //take a life away
+        document.getElementById('lives').innerHTML = "Guesses Remaining: " + lives;
         console.log(lives); //FOR TESTING: shows lives count
       }
     }
